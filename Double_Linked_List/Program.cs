@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -90,6 +91,29 @@ namespace Double_Linked_List
             return (current != null);
         }
 
-        public bool delNode(int rollNo)/*Deletes the specified node
+        public bool delNode(int rollNo)/*Deletes the specified node*/
+        {
+            Node previous , current;
+            previous = current = null;
+            if (Search(rollNo, ref previous, ref current) == false)
+                 return false;
+            if (current == START)/*If the first node is to be deleted*/
+            {
+                START = START.next;
+                if (START != null)
+                    START.prev = null;
+                return true;
+            }
+            if (current.next == null)/*If the last node is to be eleted*/
+            {
+                previous.next = null;
+                return true ;
+            }
+            public void traverse()/*Traverse the list*/
+            {
+                if 
+            }
+            }
+        }
     }
 }
