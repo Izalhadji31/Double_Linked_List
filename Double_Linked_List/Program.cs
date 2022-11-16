@@ -156,7 +156,14 @@ namespace Double_Linked_List
         }
         public bool listEmpty()
         {
-
+            if (START == null)
+                return true;
+            else
+                return false;
+        }
+        static void Main(string[] args)
+        {
+            DoubleLinkedList obj = new DoubleLinkedList();
         }
     }
 }
