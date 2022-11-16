@@ -93,10 +93,10 @@ namespace Double_Linked_List
 
         public bool delNode(int rollNo)/*Deletes the specified node*/
         {
-            Node previous , current;
+            Node previous, current;
             previous = current = null;
             if (Search(rollNo, ref previous, ref current) == false)
-                 return false;
+                return false;
             if (current == START)/*If the first node is to be deleted*/
             {
                 START = START.next;
@@ -104,16 +104,21 @@ namespace Double_Linked_List
                     START.prev = null;
                 return true;
             }
-            if (current.next == null)/*If the last node is to be eleted*/
+            if (current.next == null)/*If the last node is to be deleted*/
             {
                 previous.next = null;
                 return true ;
             }
-            public void traverse()/*Traverse the list*/
-            {
-                if 
-            }
-            }
+            /*If the node to be deleted is in between the list then the
+            following lines of code is executed.*/
+            previous.next = current.next;
+            current.next.prev = previous;
+            return true;
+        }
+
+        public void travarse()/*Travarses the list*/
+        {
+
         }
     }
 }
